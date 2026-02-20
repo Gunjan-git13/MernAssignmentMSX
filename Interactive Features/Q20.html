@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memory card flip game:</title>
+<style>
+/*Memory card flip game:*/ 
+body { 
+  font-family:Arial; 
+  text-align:center; 
+  background:#F3F4F6; 
+}
+.game {
+  display:grid;
+  grid-template-columns:repeat(2,120px);
+  gap:15px;
+  justify-content:center;
+  margin-top:40px;
+}
+.card {
+  width:120px;
+  height:120px;
+  background: #b1a4ed;
+  color: black;
+  font-size:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  border-radius:10px;
+  transition:0.3s;
+}
+.card:hover { 
+  background: #9576f5;
+}
+</style>
+</head>
+<body>
+<h2>Memory card flip game:</h2>
+<div class="game">
+<div class="card" onclick="flip(this,'1')"></div>
+<div class="card" onclick="flip(this,'2')"></div>
+<div class="card" onclick="flip(this,'1')"></div>
+<div class="card" onclick="flip(this,'2')"></div>
+</div>
+<script>
+let first=null, second=null;
+function flip(card,val){
+if(card.innerText!==""||second)return;
+card.innerText=val;
+if(!first){ first=card; }
+else{ second=card; setTimeout(check,700); }
+}
+function check(){
+if(first.innerText!==second.innerText){
+first.innerText="";
+second.innerText="";
+}
+first=null; second=null;
+}
+</script>
+</body>
+</html>

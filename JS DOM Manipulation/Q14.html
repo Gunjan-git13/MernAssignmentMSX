@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Clock</title>
+<style>
+/*Digital Clock*/
+body { 
+    text-align:center; 
+    font-family:verdana; 
+    padding:110px; 
+    background-color: #F3F4F6;
+    justify-content: center;
+}
+#clock { 
+    font-size:40px; 
+    font-weight:bold; 
+}
+</style>
+</head>
+<body>
+<h2>Digital Clock</h2>
+<div id="clock"></div>
+<script>
+function updateClock() {
+    let now = new Date();
+    let hours = String(now.getHours()).padStart(2,'0');
+    let minutes = String(now.getMinutes()).padStart(2,'0');
+    let seconds = String(now.getSeconds()).padStart(2,'0');
+
+    document.getElementById("clock").innerText =
+        hours + ":" + minutes + ":" + seconds;
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Collapsible Menu</title>
+<style>
+/*Collapsible Menu*/
+body { 
+    font-family: Verdana; 
+    padding: 30px;
+    background-color: #F3F4F6;
+}
+button {
+    padding: 15px 15px;
+    cursor: pointer;
+    background: #b1a4ed;
+    border: none;
+}
+button:hover {
+  background: #9576f5;
+}
+.content {
+    display: none;
+    padding: 15px;
+    background: #d2c9f9;
+    margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<h2>Collapsible Menu</h2>
+
+<button onclick="toggleContent()" style="background-attachment: #A78BFA;">Show/Hide</button>
+
+<div class="content" id="menuContent">
+    <p>This text appears or dissappear when the button is pressed.</p>
+</div>
+
+<script>
+function toggleContent() {
+    var content = document.getElementById("menuContent");
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form</title>
+
+<style>
+/*Login Form*/
+body {
+    margin: 0;
+    font-family: Verdana;
+    background: #F3F4F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+.login-container {
+    background: #DDD6FE;
+    padding: 50px;
+    width: 350px;
+    border-radius: 5px;
+    text-align: center;
+}
+.login-container h2 {
+    margin-bottom: 35px;
+}
+.input-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+.input-group label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;  
+}
+.input-group input:focus {
+    border-color: #4e73df;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ccc4ee;
+    border: none;
+    border-radius: 5px;
+    color: #1F2937;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #A78BFA;
+}
+</style>
+</head>
+<body>
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username" required>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>
+<style>
+/*Quiz*/
+body { 
+  font-family:verdana; 
+  background:#F3F4F6; 
+  padding:45px; 
+}
+.quiz-box {
+  background:rgb(232, 210, 252);
+  padding:30px;
+  max-width:560px;
+  margin:auto;
+  border-radius:15px;
+}
+button {
+  padding:10px 15px;
+  border:none;
+  background: #b1a4ed;
+  color: black;
+  border-radius:5px;
+  cursor:pointer;
+}
+button:hover { 
+  background: #9576f5;
+}
+</style>
+</head>
+<body>
+
+<div class="quiz-box">
+<h2>Quiz</h2>
+<form id="quiz">
+<p>1. HTML is A Hypertext Markup language?</p>
+<input type="radio" name="q1" value="true">True
+<input type="radio" name="q1" value="false">False
+
+<p>2. Node.js is not a runtime environment for JavaScript?</p>
+<input type="radio" name="q2" value="true">True
+<input type="radio" name="q2" value="false">False
+
+<p>3. CSS is used for style the web pages?</p>
+<input type="radio" name="q3" value="true">True
+<input type="radio" name="q3" value="false">False
+<br><br>
+<button type="button" onclick="check()">Submit</button>
+</form>
+<p id="result"></p>
+</div>
+
+<script>
+function check(){
+let score=0;
+if(quiz.q1.value==="true")score++;
+if(quiz.q2.value==="false")score++;
+if(quiz.q3.value==="true")score++;
+document.getElementById("result").innerText="Score: "+score+"/3";
+}
+</script>
+
+</body>
+</html>

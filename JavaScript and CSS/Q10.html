@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Navbar Scroll Effect</title>
+<style>
+/*Navbar Scroll*/ 
+body {
+    margin: 0;
+    font-family: verdana;
+    height: 2000px; 
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    color: rgb(3, 3, 3);
+    transition: 0.3s;
+}
+.navbar.scrolled {
+    background: #A78BFA;
+}
+</style>
+</head>
+<body>
+<div class="navbar" id="navbar">
+    My Navbar
+</div>
+
+<script>
+window.onscroll = function() {
+    var nav = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+};
+</script>
+</body>
+</html>

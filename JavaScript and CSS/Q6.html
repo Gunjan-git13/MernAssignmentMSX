@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Gallery</title>
+<style>
+/*Image Gallery*/
+body { font-family: Verdana; background:#F3F4F6; 
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+.gallery div {
+    overflow: hidden;
+}
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.gallery div:hover img {
+    transform: scale(1.1);
+}
+.h2 {
+    color: red;
+    font-family: 'Courier New';
+    justify-content: center;
+}
+</style>
+</head>
+<body>
+<h2 style="text-align: center; color: #564293; font-family: 'vardana';">Image Gallery</h2>
+<div class="gallery">
+    <div><img src="C:\Users\Gunjan\Desktop\MERN_Assignments\assets\img\img1.jpg"></div>
+    <div><img src="C:\Users\Gunjan\Desktop\MERN_Assignments\assets\img\img2.jpg"></div>
+    <div><img src="C:\Users\Gunjan\Desktop\MERN_Assignments\assets\img\img3.jpg"></div>
+    <div><img src="C:\Users\Gunjan\Desktop\MERN_Assignments\assets\img\img4.jpg"></div>
+    <div><img src="C:\Users\Gunjan\Desktop\MERN_Assignments\assets\img\img5.jpeg"></div>
+    <div><img src="C:\Users\Gunjan\Desktop\MERN_Assignments\assets\img\img6.jpeg"></div>
+</div>
+</body>
+</html>

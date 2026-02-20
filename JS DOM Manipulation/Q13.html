@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Changer</title>
+<style>
+    /*Color Changer*/
+body { 
+    text-align:center; 
+    padding:50px; 
+    font-family:verdana; 
+    background-color: #FFF7ED;
+    justify-content: center;
+}
+button { 
+    padding:10px 15px; 
+    margin:10px; 
+    background: #FDBA74;
+    border: none;
+    color: #374151; 
+}
+button:hover {
+  background: #A7F3D0;
+}
+.h2 {
+    color: #374151;
+}
+</style>
+</head>
+<body>
+<h2>Background Color Changer</h2>
+<button onclick="changeColor('pink')">Pink</button>
+<button onclick="changeColor('lightblue')">LightBule</button>
+<button onclick="changeColor('purple')">Purple</button>
+<button onclick="changeColor('lavender')">Lavender</button>
+<script>
+function changeColor(color) {
+    document.body.style.backgroundColor = color;
+}
+</script>
+</body>
+</html>
